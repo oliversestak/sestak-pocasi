@@ -40,9 +40,9 @@ class Main extends BaseController
         $data["nazev"] = $nazev;
         $stanice = $this->station->where("bundesland", $idZeme)->findAll();
         $data["stanice"] = $stanice;
-        //var_dump($nazev);
+        //var_dump($stanice);
 
         
-        echo view("stranka", $data);
+     echo view("stranka", $data);
     }
 }
