@@ -12,7 +12,8 @@
 foreach($stanice as $row){
   ?>
 <div class="card">
-  <div class="card-body">Místo:  <?= $row->place ?> </div>
+  <div class="card-body"><?= $row->place ?> </div>
+  <div class="card-text ms-2">geo: <?= $row->geo_latitude ?> </div>
 </div>
 <?php 
 }
