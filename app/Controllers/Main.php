@@ -45,4 +45,12 @@ class Main extends BaseController
         
      echo view("stranka", $data);
     }
+
+    public function stanice()
+    {
+       $stanice = $this->station->findAll();
+       $data["stanice"] = $stanice;
+      //  echo view("stanice", $)
+
+    }
 }

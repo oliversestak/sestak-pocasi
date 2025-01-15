@@ -16,6 +16,7 @@
     <div class="container">
         <?= $this->renderSection("content"); ?>
     </div>
+    
 </body>
 
 </html>
