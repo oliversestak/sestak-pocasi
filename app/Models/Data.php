@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class Data extends Model
 {
-    protected $table            = 'datas';
+    protected $table            = 'data';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
