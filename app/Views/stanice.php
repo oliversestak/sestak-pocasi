@@ -4,6 +4,7 @@
 <?= $this->section("content");  ?>
 
 <h1>Naměřená data <?= $stanice->place ?> </h1>
+
 <?php
 
 $table = new \CodeIgniter\View\Table();

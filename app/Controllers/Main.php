@@ -50,7 +50,7 @@ class Main extends BaseController
     {
        $stanice = $this->station->find($station_id);
        $data["stanice"] = $stanice;
-       $tabulka = $this->data->where("Stations_ID",$station_id)->findAll();
+       $tabulka = $this->data->where("Stations_ID",$station_id)->orderBy("date", "asc")->findAll();
        $data["tabulka"] = $tabulka;
        echo view("stanice", $data);
     }
