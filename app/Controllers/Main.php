@@ -52,6 +52,8 @@ class Main extends BaseController
        $data["stanice"] = $stanice;
        $tabulka = $this->data->where("Stations_ID",$station_id)->orderBy("date", "asc")->findAll();
        $data["tabulka"] = $tabulka;
+       //$obrazky["cestaO"] = 
        echo view("stanice", $data);
+
     }
 }

@@ -14,4 +14,6 @@ $routes->get('stranka/(:num)', 'Main::stranka/$1');
 
 $routes->get('stanice/(:num)', 'Main::stanice/$1');
 
+$routes->get('tabulka', 'Main::obrazky');
+
 
