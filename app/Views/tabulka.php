@@ -8,6 +8,9 @@
 <?php
 $table = new \CodeIgniter\View\Table();
 $table->setHeading("");
+
+$cesta = "node_modules/obrazky/vlajky/";
+$cesta2 = "node_modules/obrazky/mapy/"
 ?>
 
 
@@ -26,7 +29,25 @@ $table->setHeading("");
                 <td> <?php echo $row->id; ?> </td>
                 <td> <a href="stranka/<?php echo $row->id; ?>" class="text-decoration-none"> <?php echo $row->name; ?> </a> </td>
                 <td> <?php echo $row->short_name; ?> </td>
-                <td> <?php anchor("obrazky/") ?></td>
+                <td> <?php 
+                $obrazek = [
+                    "src"=>$cesta.$row->flag,
+                    "width"=>80
+                ];
+
+                
+                echo img($obrazek) ?> 
+                </td>
+                <td>
+                    <?php  
+                    $obrazek2 = [
+                        "src"=>$cesta2.$row->map,
+                        "width"=>120
+                        //"height"=>80
+                    ];
+                    
+                    echo img($obrazek2) ?>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>

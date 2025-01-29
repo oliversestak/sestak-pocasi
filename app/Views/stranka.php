@@ -20,6 +20,7 @@ foreach($stanice as $row) {
            <p> <span class="fw-bold"> šířka: <?= $row->geo_latitude ?> </p> </span> 
            <p> <span class="fw-bold">  délka: <?= $row->geo_longtitude ?></p> </span>
            <p> <span class="fw-bold"> výška: <?= $row->height ?></p> </span>
+           
         </div>
      </div>
      </div>
