@@ -22,7 +22,7 @@ foreach($stanice as $row) {
            <p> <span class="fw-bold"> výška: <?= $row->height ?></p> </span>
         </div>
         <div>
-         <?=  ?>
+         
         </div>
      </div>
      </div>

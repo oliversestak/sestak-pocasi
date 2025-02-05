@@ -54,8 +54,16 @@ class Main extends BaseController
        $data["tabulka"] = $tabulka;
        $obrazky["cesta"] = $this->boundesLand->findAll();
        $data["obrazky"] = $obrazky;
+      
 
 
        echo view("stanice", $data);
+    }
+
+    public function allCountries() {
+        $karta = $this->boundesLand->join("station", "bundesland.id=station.bundesland", "inner")->findAll();       //nacitani dat ze dvou tabulek
+
+
+        //var_dump($karta);
     }
 }
