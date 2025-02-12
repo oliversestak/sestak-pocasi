@@ -1,15 +1,13 @@
-
 <?= $this->extend("layout/template"); ?>
 
 
 <?= $this->section("content");  ?>
 
-<h1>Přehled meteorologických stanic ve spolkové zemi <?= $nazev->name ?></h1> 
 
 <div class="row">
 <?php
 
-foreach($stanice as $row) {
+foreach($karta as $row) {
 ?>
 
   
@@ -20,13 +18,13 @@ foreach($stanice as $row) {
            <p> <span class="fw-bold"> šířka: <?= $row->geo_latitude ?> </p> </span> 
            <p> <span class="fw-bold">  délka: <?= $row->geo_longtitude ?></p> </span>
            <p> <span class="fw-bold"> výška: <?= $row->height ?></p> </span>
+           <img src="<?= base_url('node_modules/obrazky/vlajky/'.$row->flag) ?>", width="120", height="auto">
         </div>
      </div>
      </div>
 <?php 
 }
 ?>
-
 
 
 <?= $this->endSection(); ?>

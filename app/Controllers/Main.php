@@ -61,9 +61,10 @@ class Main extends BaseController
     }
 
     public function allCountries() {
-        $karta = $this->boundesLand->join("station", "bundesland.id=station.bundesland", "inner")->findAll();       //nacitani dat ze dvou tabulek
-
+        $karta = $this->boundesLand->join("station", "bundesland.id=station.bundesland", "inner")->orderBy("place", "asc")->findAll();       //nacitani dat ze dvou tabulek
+        $data["karta"] = $karta;
 
         //var_dump($karta);
+        echo view("karta", $data);
     }
 }
