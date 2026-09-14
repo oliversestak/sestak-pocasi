@@ -10,9 +10,9 @@ class Station extends Model
     protected $primaryKey       = 'S_ID';
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['bundesland', 'place', 'lat', 'lng'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

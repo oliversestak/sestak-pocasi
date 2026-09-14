@@ -10,9 +10,9 @@ class Data extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['Stations_ID', 'date', 'quality', 'min_5cm', 'min_2m', 'mid_2m', 'max_2m', 'humidity', 'mid_wind', 'max_wind', 'sun_length', 'mid_cloud', 'precipitation', 'mid_air_pressure'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
