@@ -26,6 +26,7 @@ $table->setHeading("datum", "vlhkost", "sluneční dosvit", "tlak", "maximální
                 <th>Maximální vítr (km/h)</th>
                 <th>Akce</th>
             </tr>
+            
         </thead>
         <tbody>
             <?php foreach ($tabulka as $row): ?>
